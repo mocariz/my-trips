@@ -13,10 +13,21 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  p,
+  a {
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    line-height: ${({ theme }) => theme.lineHeight.medium};
+  }
+  a {
+    color: ${({ theme }) => theme.colors.highlight};
   }
 `
 
