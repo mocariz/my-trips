@@ -12,5 +12,7 @@ export default {
   lineHeight: {
     medium: '3rem'
   },
-  container: '100rem'
+  width: {
+    container: '100rem'
+  }
 }
