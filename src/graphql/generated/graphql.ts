@@ -4107,3 +4107,8 @@ export type GetPageBySlugQueryVariables = Exact<{
 
 
 export type GetPageBySlugQuery = { __typename?: 'Query', page?: { __typename?: 'Page', id: string, slug: string, heading: string, body: { __typename?: 'RichText', html: string } } | null | undefined };
+
+export type GetPlacesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetPlacesQuery = { __typename?: 'Query', places: Array<{ __typename?: 'Place', id: string, slug: string, name: string, location: { __typename?: 'Location', latitude: number, longitude: number }, description?: { __typename?: 'RichText', html: string } | null | undefined, gallery: Array<{ __typename?: 'Asset', url: string, height?: number | null | undefined, width?: number | null | undefined }> }> };
