@@ -1,6 +1,6 @@
 {
-  "name": "NextJs - Boilerplate",
-  "short_name": "NextJs-Boilerplate",
+  "name": "My Trips - Mocariz",
+  "short_name": "My Trips",
   "icons": [
   {
   "src": "/img/icon-192.png",
@@ -13,9 +13,9 @@
   "sizes": "512x512"
   }
   ],
-  "background_color": "#06092B",
-  "description": "Boilerlate utilizando Typescript, React, NextJS e Styled Components!",
+  "background_color": "#030518",
+  "description": "Um projeto bem simples para mostrar em um mapa os lugares que eu fui e/ou quero ir e mostrar mais informações e fotos quando sobre o local.",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#a33eff"
   }
