@@ -12,16 +12,16 @@ export default function HomeTemplate({ places }: MapProps) {
     <>
       <NextSeo
         title="My Trips"
-        description="A simple project to show in a map the places that I went and show more informations and photos when clicked."
-        canonical="https://my-trips.willianjusten.com.br"
+        description="Um projeto bem simples para mostrar em um mapa os lugares que eu fui e/ou quero ir e mostrar mais informações e fotos quando sobre o local."
+        canonical="https://my-trips-mocariz.vercel.app"
         openGraph={{
-          url: 'https://my-trips.willianjusten.com.br',
+          url: 'https://my-trips-mocariz.vercel.app',
           title: 'My Trips',
           description:
-            'A simple project to show in a map the places that I went and show more informations and photos when clicked.',
+            'A simple project to show in a map the places that I went or want to go and show more information and photos when clicked.',
           images: [
             {
-              url: 'https://my-trips.willianjusten.com.br/img/cover.png',
+              url: 'https://my-trips-mocariz.vercel.app/img/cover.png',
               width: 1280,
               height: 720,
               alt: 'My Trips'

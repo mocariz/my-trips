@@ -25,6 +25,9 @@ export type PlacesTemplateProps = {
   }
 }
 
+const description =
+  'Um projeto bem simples para mostrar em um mapa os lugares que eu fui e/ou quero ir e mostrar mais informações e fotos quando sobre o local.'
+
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
   const router = useRouter()
 
@@ -35,17 +38,12 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
       <NextSeo
         title="My trips"
         titleTemplate={`${place.name} - %s`}
-        description={
-          place.description?.text ||
-          'A simple project to show in a map the places that I went and show more information and photos when clicked.'
-        }
-        canonical="https://mytrips.com"
+        description={place.description?.text || description}
+        canonical="https://my-trips-mocariz.vercel.app"
         openGraph={{
-          url: 'https://mytrips.com',
+          url: 'https://my-trips-mocariz.vercel.app',
           title: `${place.name} - My Trips`,
-          description:
-            place.description?.text ||
-            'A simple project to show in a map the places that I went and show more information and photos when clicked.',
+          description: place.description?.text || description,
           images: [
             {
               url: place.gallery[0].url,

@@ -38,7 +38,7 @@ const Map = ({ places }: MapProps) => {
 
   return (
     <MapContainer
-      center={[0, 0]}
+      center={[20, 0]}
       zoom={3}
       style={{ height: '100%', width: '100%' }}
     >

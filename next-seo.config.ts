@@ -2,7 +2,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://my-trips.willianjusten.com.br',
+    url: 'https://my-trips-mocariz.vercel.app',
     site_name: 'My Trips'
   },
   twitter: {
