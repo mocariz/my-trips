@@ -6,6 +6,7 @@ import {
   Tooltip,
   MapConsumer
 } from 'react-leaflet'
+import L from 'leaflet'
 
 import * as S from './styles'
 import { mapView } from './config'
@@ -18,6 +19,7 @@ type Place = {
     latitude: number
     longitude: number
   }
+  visited: boolean
 }
 
 export type MapProps = {
@@ -41,6 +43,22 @@ const CustomTileLayer = () => {
     />
   )
 }
+
+const markerIcon = new L.Icon({
+  iconUrl: 'img/pin.png',
+  iconSize: [25, 25],
+  iconAnchor: [20, 20],
+  popupAnchor: [0, -40],
+  tooltipAnchor: [20, 0]
+})
+
+const markerIconCheck = new L.Icon({
+  iconUrl: 'img/pin-check.png',
+  iconSize: [25, 25],
+  iconAnchor: [20, 20],
+  popupAnchor: [0, -40],
+  tooltipAnchor: [20, 0]
+})
 
 const Map = ({ places }: MapProps) => {
   const router = useRouter()
@@ -81,13 +99,14 @@ const Map = ({ places }: MapProps) => {
         </MapConsumer>
         <CustomTileLayer />
 
-        {places?.map(({ id, slug, name, location }) => {
+        {places?.map(({ id, slug, name, location, visited }) => {
           const { latitude, longitude } = location
 
           return (
             <Marker
               key={`place-${id}`}
               position={[latitude, longitude]}
+              icon={visited ? markerIconCheck : markerIcon}
               eventHandlers={{
                 click: () => {
                   router.push(`/place/${slug}`)
